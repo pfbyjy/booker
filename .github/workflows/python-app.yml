@@ -6,6 +6,8 @@ name: Python application
 on:
   push:
     branches: [ "dev" ]
+  pull_request:
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -35,16 +37,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Create pull request to main
-      uses: repo-sync/pull-request@v2
-      with:
-        destination_branch: "main"
-        pr_title: "Merging ${{ github.ref }} into main"
-        pr_label: "auto-pr"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: output-url
-      run: echo ${{steps.open-pr.outputs.pr_url}}
-    - name: output-number
-      run: echo ${{steps.open-pr.outputs.pr_number}}
-    - name: output-has-changed-files
-      run: echo ${{steps.open-pr.outputs.has_changed_files}}
