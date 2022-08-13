@@ -1,2 +1,9 @@
-# booker
-a cli app to manage reading lists
+# Booker
+Booker is a command line utility that allows you to manage reading lists.
+
+## Usage
+
+## Development
+
+## Contributing
+
