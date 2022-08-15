@@ -1,9 +1,8 @@
 from pathlib import Path
 from unittest.mock import patch
 
-from _pytest.fixtures import fixture
 
-from booker import config, __app_name__
+from booker import config
 from booker.error import Error, CONFIG_DIRECTORY_ERROR, CONFIG_FILE_ERROR
 
 

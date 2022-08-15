@@ -5,7 +5,7 @@ from unittest.mock import patch
 import pkg_resources
 from _pytest.fixtures import fixture
 
-from booker.booker import BookList, Book
+from booker.bookerdataclasses import BookList, Book
 from booker.database import DBHandler
 from booker import __app_name__, config
 

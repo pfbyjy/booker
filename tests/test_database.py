@@ -2,8 +2,6 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pkg_resources
-
 from booker import database
 from booker.error import Error
 
