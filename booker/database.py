@@ -2,7 +2,7 @@ import configparser
 import json
 from pathlib import Path
 
-from booker.booker import BookList, Book
+from booker.bookerdataclasses import BookList, Book
 from booker.error import DB_WRITE_ERROR, SUCCESS, Outcome, DB_READ_ERROR, JSON_ERROR
 
 DEFAULT_DB_FILE_PATH = Path.home().joinpath("." + Path.home().stem + "_books.json")

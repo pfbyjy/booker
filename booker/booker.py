@@ -1,26 +1,8 @@
-from dataclasses import field
-from enum import Enum
-from typing import NamedTuple, List, TypedDict
+from pathlib import Path
 
-from booker.error import Outcome
+from booker.database import DBHandler
 
 
-class ImportMethod(Enum):
-    MANUAL = 0
-    BULK = 1
-
-
-class Book(TypedDict):
-    id: int
-    isbn: str
-    title: str
-    author_fname: str
-    author_lname: str
-
-
-BookList = List[Book]
-
-
-class CurrentBook(NamedTuple):
-    book: Book
-    outcome: Outcome
+class Booker:
+    def __init__(self, db_path: Path) -> None:
+        self._db_handler = DBHandler(db_path)
