@@ -24,4 +24,3 @@ BookList = List[Book]
 class CurrentBook(NamedTuple):
     book: Book
     outcome: Outcome
-

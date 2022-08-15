@@ -21,19 +21,27 @@ def db_file(tmp_path) -> Path:
 
 @fixture(scope="session")
 def mock_data_path() -> Path:
-    return Path(pkg_resources.resource_filename('tests.resources', 'test_input_data.json'))
+    return Path(
+        pkg_resources.resource_filename("tests.resources", "test_input_data.json")
+    )
+
 
 @fixture(scope="session")
 def malformed_data_path() -> Path:
-    return Path(pkg_resources.resource_filename('tests.resources', 'malformed_input.json'))
+    return Path(
+        pkg_resources.resource_filename("tests.resources", "malformed_input.json")
+    )
+
 
 @fixture(scope="session")
 def mock_db_handler(mock_data_path) -> DBHandler:
     return DBHandler(mock_data_path)
 
+
 @fixture(scope="session")
 def raw_mock_data(mock_data_path) -> str:
     return mock_data_path.read_text()
+
 
 @fixture(scope="session")
 def mock_book_list(raw_mock_data) -> BookList:
@@ -69,7 +77,7 @@ def test_read_books_fails_with_json_decode_error(mock_db_handler, malformed_data
 
 
 def test_read_books_fails_with_os_error(mock_db_handler, mock_data_path):
-    with patch.object(Path, 'open') as failing_file_read:
+    with patch.object(Path, "open") as failing_file_read:
         failing_file_read.side_effect = OSError(1, "opening the file fails")
         response = mock_db_handler.read_books()
         assert response.failed()
@@ -84,7 +92,7 @@ def test_write_books_succeeds(mock_db_handler, mock_book_list, mock_data_path):
 
 
 def test_write_books_fails(mock_db_handler, mock_book_list, mock_data_path):
-    with patch.object(Path, 'open') as failing_file_write:
+    with patch.object(Path, "open") as failing_file_write:
         failing_file_write.side_effect = OSError(1, "opening the file fails")
         response = mock_db_handler.write_books(mock_book_list)
         assert response.failed()

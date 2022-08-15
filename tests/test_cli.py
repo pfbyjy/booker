@@ -21,8 +21,9 @@ def test_version():
     [
         ["init"],
         ["init", "--db-path", "test_long_flag.json"],
-        ["init", "-db", "test_short_flag.json"]
-    ])
+        ["init", "-db", "test_short_flag.json"],
+    ],
+)
 def test_init(flags):
     result = runner.invoke(cli.app, flags)
     db_path = database.get_database_path(config.config_file_path())

@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Callable, Any, List, Tuple
+from typing import Callable, Any, List
 
 
 class Error(Enum):
@@ -31,7 +31,7 @@ class Outcome:
         }[self.err]
 
     def __repr__(self):
-        return f'{self.err}: {self._effect()}, caused by {self.cause.__repr__()}'
+        return f"{self.err}: {self._effect()}, caused by {self.cause.__repr__()}"
 
     def succeeded(self) -> bool:
         return self.err == Error.SUCCESS
@@ -45,9 +45,11 @@ class Outcome:
 
 # Outcome is kinda monadic, so we can chain them and do all the error handling in one location
 class OutcomeChain:
-    def __init__(self,
-                 error_handler: Callable[[Outcome], Any],
-                 finalizer: Callable[[Any], Any] = None):
+    def __init__(
+        self,
+        error_handler: Callable[[Outcome], Any],
+        finalizer: Callable[[Any], Any] = None,
+    ):
         self.error_handler = error_handler
         self.finalizer = finalizer
         self.toExecute = []
@@ -70,9 +72,19 @@ class OutcomeChain:
 
 
 SUCCESS = Outcome(Error.SUCCESS, "")
-CONFIG_DIRECTORY_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.CONFIG_DIRECTORY_ERROR, cause)
-CONFIG_FILE_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.CONFIG_FILE_ERROR, cause)
-DB_READ_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.DB_READ_ERROR, cause)
-DB_WRITE_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.DB_WRITE_ERROR, cause)
-JSON_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.JSON_ERROR, cause)
+CONFIG_DIRECTORY_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(
+    Error.CONFIG_DIRECTORY_ERROR, cause
+)
+CONFIG_FILE_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(
+    Error.CONFIG_FILE_ERROR, cause
+)
+DB_READ_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(
+    Error.DB_READ_ERROR, cause
+)
+DB_WRITE_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(
+    Error.DB_WRITE_ERROR, cause
+)
+JSON_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(
+    Error.JSON_ERROR, cause
+)
 ID_ERROR: Callable[[Exception], Outcome] = lambda cause: Outcome(Error.ID_ERROR, cause)

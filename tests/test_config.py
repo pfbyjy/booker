@@ -4,7 +4,7 @@ from unittest.mock import patch
 from _pytest.fixtures import fixture
 
 from booker import config, __app_name__
-from booker.error import  Error, CONFIG_DIRECTORY_ERROR, CONFIG_FILE_ERROR
+from booker.error import Error, CONFIG_DIRECTORY_ERROR, CONFIG_FILE_ERROR
 
 
 @fixture(scope="function")
