@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Callable, Any
+from typing import Callable, Any, List, Tuple
 
 
 class Error(Enum):
@@ -10,6 +10,7 @@ class Error(Enum):
     DB_WRITE_ERROR = 4
     JSON_ERROR = 5
     ID_ERROR = 6
+    VALIDATION_ERROR = 7
 
 
 class Outcome:
@@ -25,7 +26,8 @@ class Outcome:
             Error.DB_READ_ERROR: "something went wrong reading from database",
             Error.DB_WRITE_ERROR: "something went wrong writing to the database",
             Error.ID_ERROR: "something went wrong with the id supplied",
-            Error.JSON_ERROR: "something is wrong with the supplied JSON file."
+            Error.JSON_ERROR: "something is wrong with the supplied JSON file.",
+            Error.VALIDATION_ERROR: "something is wrong with the supplied input",
         }[self.err]
 
     def __repr__(self):
@@ -34,11 +36,37 @@ class Outcome:
     def succeeded(self) -> bool:
         return self.err == Error.SUCCESS
 
-    def failed(self)-> bool:
+    def failed(self) -> bool:
         return not self.succeeded()
 
-    def is_error(self, error_type: Error) -> bool :
+    def is_error(self, error_type: Error) -> bool:
         return self.err == error_type
+
+
+# Outcome is kinda monadic, so we can chain them and do all the error handling in one location
+class OutcomeChain:
+    def __init__(self,
+                 error_handler: Callable[[Outcome], Any],
+                 finalizer: Callable[[Any], Any] = None):
+        self.error_handler = error_handler
+        self.finalizer = finalizer
+        self.toExecute = []
+
+    def execute(self):
+        # execute each action in the chain
+        for action in self.toExecute:
+            outcome = action()
+            if outcome.failed():
+                # if the action fails, run the error handler
+                self.error_handler(outcome)
+        # if every action has succeeded, run the finalizer if it exists
+        if self.finalizer:
+            self.finalizer()
+        return self
+
+    def sequence(self, action: Callable[[Any], Outcome], arguments: List[Any]):
+        self.toExecute.append(lambda: action(*arguments))
+        return self  # monoidal here, so we can chain actions
 
 
 SUCCESS = Outcome(Error.SUCCESS, "")
