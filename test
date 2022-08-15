@@ -1,35 +1,50 @@
 #!/bin/bash
 
 # usage, run test suite. 
-# ./test -> run entire suite
-# ./test `mark` -> runs tests marked with @mark. See pytest.ini in project root for custom marks
-# ./test verbose -> runs entire suite while printing output from failed tests to stdout
-# ./test verbose `mark` -> verbose but for tests marked with @mark
+# ./test regular -> run entire suite
+# ./test regular `mark` -> runs tests marked with @mark. See pytest.ini in project root for custom marks
+# ./test stdout -> runs entire suite while printing output from failed tests to stdout
+# ./test stdout `mark` -> stdout but for tests marked with @mark
+# ./test verbose -> runs entire suite with verbose output
+# ./test stdout `mark` -> verbose but for tests marked with @mark
 
 
-if [[ $1 == "verbose" ]]
-then
-    if [[ $# == 1 ]]
-    then
-        python -m pytest -s $2
-        exit 0
-    fi
+base_cmd="python -m pytest"
+base_mark_cmd="-m"
 
-    if [[ $# == 2 ]]
-    then
-        python -m pytest -s -m $2
-        exit 0
-    fi
-else 
-if [[ $# == 0 ]]
-    then
-	python -m pytest tests/
-        exit 0
-    fi
+declare -a regular_cmds=(
+"$base_cmd"
+"$base_cmd $base_mark_cmd"
+)
 
-    if [[ $# == 1 ]]
-    then
-        python -m pytest -m $1
-        exit 0
-    fi
-fi
+declare -a stdout_cmds=(
+	"$base_cmd -s" 
+	"$base_cmd -s $base_mark_cmd" 
+)
+
+declare -a verbose_cmds=(
+	"$base_cmd -vv"
+	"$base_cmd -vv $base_mark_cmd"
+)
+
+
+cmd_lookup() {
+	if [[ $1 == "regular" ]]
+	then
+		echo "${regular_cmds[$2]}" $3
+	elif [[ $1 == "stdout" ]]
+	then
+		echo "${stdout_cmds[$2]}" $3 
+	elif [[ $1 == "verbose" ]]
+	then
+		echo "${verbose_cmds[$2]}" $3 
+	else
+		echo $1 "is not a known command"
+	fi
+}
+
+
+cmd_idx=$(( $# - 1 ))
+cmd=$1
+mark=$2
+$(cmd_lookup $cmd $cmd_idx $mark)
