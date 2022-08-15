@@ -7,13 +7,6 @@ from booker import config, __app_name__
 from booker.error import Error, CONFIG_DIRECTORY_ERROR, CONFIG_FILE_ERROR
 
 
-@fixture(scope="function")
-def mock_config_dir(tmp_path) -> None:
-    with patch.object(config, "config_dir_path") as mock_config:
-        mock_path = tmp_path / f"mock_dir/{__app_name__}"
-        mock_config.return_value = mock_path
-
-
 def test_init_config_file_with_config_dir_os_error_returns_config_dir_error_code(
     mock_config_dir,
 ):
