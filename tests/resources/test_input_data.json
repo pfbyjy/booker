@@ -1,100 +1,702 @@
-[{"id":1,"author_fname":"Orsola","author_lname":"Arminger","title":"Forgiven","isbn":"0894001614632"},
-{"id":2,"author_fname":"Selie","author_lname":"Boyford","title":"Europeans, The","isbn":"9646210453645"},
-{"id":3,"author_fname":"Rheta","author_lname":"Seeks","title":"The Things of Life","isbn":"6513420807743"},
-{"id":4,"author_fname":"Rosalie","author_lname":"Payton","title":"Lusty Men, The","isbn":"8271196340498"},
-{"id":5,"author_fname":"Reilly","author_lname":"Leverington","title":"You Will Meet a Tall Dark Stranger","isbn":"3918135846073"},
-{"id":6,"author_fname":"Taddeo","author_lname":"Portch","title":"Scream 2","isbn":"6193411025695"},
-{"id":7,"author_fname":"Courtenay","author_lname":"Chazette","title":"22 Jump Street","isbn":"8480316557617"},
-{"id":8,"author_fname":"Gunter","author_lname":"Rowesby","title":"Special Bulletin","isbn":"8982757593057"},
-{"id":9,"author_fname":"Sonja","author_lname":"Ambrose","title":"Anna","isbn":"8080160759077"},
-{"id":10,"author_fname":"Jorey","author_lname":"Vernall","title":"Ju-on: White Ghost","isbn":"6358740890015"},
-{"id":11,"author_fname":"Cosme","author_lname":"Pym","title":"Son of Lassie","isbn":"6948244553058"},
-{"id":12,"author_fname":"Sidonia","author_lname":"Kimberley","title":"Stella","isbn":"9110514870774"},
-{"id":13,"author_fname":"Irvine","author_lname":"Jouanet","title":"Butcher Boy, The","isbn":"0045975899731"},
-{"id":14,"author_fname":"Eduardo","author_lname":"Thandi","title":"Shooting Gallery","isbn":"6097679631548"},
-{"id":15,"author_fname":"Ilario","author_lname":"Le Breton De La Vieuville","title":"Fallen Art (Sztuka spadania)","isbn":"3478793539338"},
-{"id":16,"author_fname":"Zonnya","author_lname":"Jiggins","title":"Portrait of a Lady, The","isbn":"4576387731257"},
-{"id":17,"author_fname":"Sonja","author_lname":"Sandifer","title":"Let Fury Have the Hour","isbn":"6832878967746"},
-{"id":18,"author_fname":"Alberto","author_lname":"Ahmad","title":"Berserk: The Golden Age Arc 3 - Descent","isbn":"9668943606974"},
-{"id":19,"author_fname":"Milty","author_lname":"Glabach","title":"Dopamine","isbn":"1478265607005"},
-{"id":20,"author_fname":"Charles","author_lname":"McKern","title":"Shinjuku Incident (San suk si gin)","isbn":"6797828234401"},
-{"id":21,"author_fname":"Crista","author_lname":"Hennington","title":"Chicago 8, The","isbn":"1698428450544"},
-{"id":22,"author_fname":"Charity","author_lname":"Manvell","title":"Splendor","isbn":"2619749606086"},
-{"id":23,"author_fname":"Vevay","author_lname":"Giacobini","title":"Witch Who Came from the Sea, The","isbn":"0696013566647"},
-{"id":24,"author_fname":"Brnaby","author_lname":"Oager","title":"Winner, The","isbn":"6973631133246"},
-{"id":25,"author_fname":"Zorine","author_lname":"Dunstone","title":"Wasp Woman, The","isbn":"6354058995607"},
-{"id":26,"author_fname":"Joseph","author_lname":"Braisted","title":"Drillbit Taylor","isbn":"0154144924444"},
-{"id":27,"author_fname":"Gardy","author_lname":"Bruyntjes","title":"Daisies (Sedmikrasky)","isbn":"0495879387100"},
-{"id":28,"author_fname":"Cacilie","author_lname":"Sommerling","title":"Foxfire","isbn":"7386857518839"},
-{"id":29,"author_fname":"Sigismond","author_lname":"Brise","title":"Held Up","isbn":"6455058093538"},
-{"id":30,"author_fname":"Constantine","author_lname":"Goulbourn","title":"Murder at 1600","isbn":"3476251027246"},
-{"id":31,"author_fname":"Joel","author_lname":"Spleving","title":"Devil's Backbone, The (Espinazo del diablo, El)","isbn":"4115570120784"},
-{"id":32,"author_fname":"Henderson","author_lname":"Sahlstrom","title":"Blow Dry (a.k.a. Never Better)","isbn":"2446390229204"},
-{"id":33,"author_fname":"Horatius","author_lname":"Josselson","title":"Hollywood Sex Wars","isbn":"6314380557832"},
-{"id":34,"author_fname":"Shepard","author_lname":"Chaplin","title":"Chasing Ghosts: Beyond the Arcade ","isbn":"7160348559430"},
-{"id":35,"author_fname":"Hurley","author_lname":"Rumsey","title":"Moscow Laughs","isbn":"3562883060453"},
-{"id":36,"author_fname":"Inga","author_lname":"Brindle","title":"Behold a Pale Horse","isbn":"0802967531566"},
-{"id":37,"author_fname":"Ellerey","author_lname":"Reeson","title":"Confidentially Connie","isbn":"3870058124386"},
-{"id":38,"author_fname":"Clementine","author_lname":"Damp","title":"Lionheart","isbn":"3469052312343"},
-{"id":39,"author_fname":"Dilan","author_lname":"Scopyn","title":"Sunshine","isbn":"1008742551251"},
-{"id":40,"author_fname":"Cornelia","author_lname":"Wozencroft","title":"Without Love","isbn":"2303080425885"},
-{"id":41,"author_fname":"Kristo","author_lname":"Wilprecht","title":"The Last Journey","isbn":"0298959325162"},
-{"id":42,"author_fname":"Cinnamon","author_lname":"Lesor","title":"Cowboy Bebop: The Movie (Cowboy Bebop: Tengoku no Tobira)","isbn":"4288077743724"},
-{"id":43,"author_fname":"Rolland","author_lname":"Thackray","title":"Ichi the Killer (Koroshiya 1)","isbn":"3141685460084"},
-{"id":44,"author_fname":"Ertha","author_lname":"Harnell","title":"God Bless America","isbn":"7475139168843"},
-{"id":45,"author_fname":"Garrott","author_lname":"Pyner","title":"Amish Murder, An","isbn":"6279768720585"},
-{"id":46,"author_fname":"Ariel","author_lname":"Yelden","title":"Innocence","isbn":"5108505465145"},
-{"id":47,"author_fname":"Nisse","author_lname":"Carrett","title":"Science and Islam","isbn":"1350151908376"},
-{"id":48,"author_fname":"Nanice","author_lname":"Stride","title":"Thomas in Love (Thomas est Amoureux)","isbn":"7881458749748"},
-{"id":49,"author_fname":"Marsh","author_lname":"Cuesta","title":"Panther","isbn":"2960149702661"},
-{"id":50,"author_fname":"Elisha","author_lname":"Claeskens","title":"Emotion","isbn":"7940519543294"},
-{"id":51,"author_fname":"Felike","author_lname":"Moan","title":"Red Sands","isbn":"1020359743368"},
-{"id":52,"author_fname":"Tobiah","author_lname":"Hember","title":"Monkey Shines","isbn":"2490238569763"},
-{"id":53,"author_fname":"Siffre","author_lname":"Mains","title":"A Star Athlete","isbn":"7277782224415"},
-{"id":54,"author_fname":"Carlina","author_lname":"McLuckie","title":"Talk to Her (Hable con Ella)","isbn":"5854340040354"},
-{"id":55,"author_fname":"Shannan","author_lname":"Curman","title":"Hair Show","isbn":"5593843798866"},
-{"id":56,"author_fname":"Paige","author_lname":"Bretton","title":"Deadly Blessing","isbn":"2897951934036"},
-{"id":57,"author_fname":"Curcio","author_lname":"D' Angelo","title":"Orphanage, The (Orfanato, El)","isbn":"2731593918391"},
-{"id":58,"author_fname":"Aindrea","author_lname":"Falcus","title":"Fiston","isbn":"7224328398707"},
-{"id":59,"author_fname":"Yoshi","author_lname":"Snawdon","title":"Beautiful","isbn":"1161211908540"},
-{"id":60,"author_fname":"Brendon","author_lname":"Myers","title":"Bad Boy Bubby","isbn":"1421895827473"},
-{"id":61,"author_fname":"Meyer","author_lname":"Zemler","title":"Free Willy 2: The Adventure Home","isbn":"2227089026348"},
-{"id":62,"author_fname":"Bronnie","author_lname":"De Launde","title":"I Live My Life","isbn":"4807340269527"},
-{"id":63,"author_fname":"Joni","author_lname":"Larmor","title":"Pauly Shore Is Dead","isbn":"5313145771721"},
-{"id":64,"author_fname":"Dean","author_lname":"Churchyard","title":"My Sweet Pepper Land","isbn":"4602062242127"},
-{"id":65,"author_fname":"Wain","author_lname":"Keyser","title":"Low Down Dirty Shame, A","isbn":"1334623955102"},
-{"id":66,"author_fname":"Elnar","author_lname":"Soffe","title":"Angels and Insects","isbn":"2186447044799"},
-{"id":67,"author_fname":"Clementius","author_lname":"Loveredge","title":"Diary of a Hitman","isbn":"4899945205210"},
-{"id":68,"author_fname":"Dotty","author_lname":"Joberne","title":"Manny & Lo","isbn":"0711894181320"},
-{"id":69,"author_fname":"Kirk","author_lname":"Newvell","title":"Lisa Picard is Famous (a.k.a. Famous)","isbn":"4192025146464"},
-{"id":70,"author_fname":"Blinni","author_lname":"Kernes","title":"Three Wise Men (Kolme viisasta miestä)","isbn":"5455739783423"},
-{"id":71,"author_fname":"Aron","author_lname":"McIlhatton","title":"Temple Grandin","isbn":"6102823001676"},
-{"id":72,"author_fname":"Rhianna","author_lname":"Sudran","title":"Not Without My Daughter","isbn":"0521891829579"},
-{"id":73,"author_fname":"Elene","author_lname":"Erskine Sandys","title":"Road North (Tie pohjoiseen)","isbn":"3205884411515"},
-{"id":74,"author_fname":"Geoffrey","author_lname":"Glentworth","title":"Fortune Cookie, The","isbn":"1620405659926"},
-{"id":75,"author_fname":"Karlik","author_lname":"Iscowitz","title":"Escape from Planet Earth","isbn":"4915541164602"},
-{"id":76,"author_fname":"Eadith","author_lname":"Tesche","title":"Women in Trouble","isbn":"5767577699517"},
-{"id":77,"author_fname":"Avram","author_lname":"Hinsch","title":"Journey 2: The Mysterious Island","isbn":"8093127884253"},
-{"id":78,"author_fname":"Silva","author_lname":"Port","title":"Big Hangover, The","isbn":"1015933155622"},
-{"id":79,"author_fname":"Nicolas","author_lname":"Huckerbe","title":"Switching Goals","isbn":"0305379240920"},
-{"id":80,"author_fname":"Minny","author_lname":"Hallaways","title":"Dark Girls","isbn":"9110050066789"},
-{"id":81,"author_fname":"Lauri","author_lname":"Red","title":"Hurricane, The","isbn":"0494641258633"},
-{"id":82,"author_fname":"Robina","author_lname":"Wealthall","title":"Far Out Isn't Far Enough: The Tomi Ungerer Story","isbn":"6697924215610"},
-{"id":83,"author_fname":"Kristoforo","author_lname":"Omrod","title":"Eight Miles High (Das wilde Leben)","isbn":"7392902299965"},
-{"id":84,"author_fname":"Baxy","author_lname":"Ballchin","title":"Glass Menagerie, The","isbn":"9118179852860"},
-{"id":85,"author_fname":"Kelby","author_lname":"Noor","title":"Great Texas Dynamite Chase, The","isbn":"8746075548632"},
-{"id":86,"author_fname":"Lemmy","author_lname":"Pascow","title":"You and Me (Ty i ya)","isbn":"4133045916654"},
-{"id":87,"author_fname":"Mikaela","author_lname":"Densey","title":"Little Women","isbn":"7194243340325"},
-{"id":88,"author_fname":"Donn","author_lname":"Starcks","title":"Innocent Man, An","isbn":"1104946205379"},
-{"id":89,"author_fname":"Pall","author_lname":"Delhanty","title":"Alexander Nevsky (Aleksandr Nevskiy)","isbn":"8329606229832"},
-{"id":90,"author_fname":"Devonna","author_lname":"Purslow","title":"588 Rue Paradis (Mother)","isbn":"1308567767007"},
-{"id":91,"author_fname":"Knox","author_lname":"Boorer","title":"Sucker, The (Corniaud, Le)","isbn":"1334314006539"},
-{"id":92,"author_fname":"Ruthanne","author_lname":"Kinnar","title":"Punk Syndrome, The (Kovasikajuttu)","isbn":"6494245079876"},
-{"id":93,"author_fname":"Veda","author_lname":"Mugford","title":"Black River (Kuroi kawa)","isbn":"9256837149917"},
-{"id":94,"author_fname":"Rossy","author_lname":"Nashe","title":"She Done Him Wrong","isbn":"0007403832909"},
-{"id":95,"author_fname":"Valaria","author_lname":"Grigolli","title":"Snowman, The","isbn":"5584453208371"},
-{"id":96,"author_fname":"Marysa","author_lname":"Bickerstasse","title":"It Felt Like Love","isbn":"4546783464452"},
-{"id":97,"author_fname":"Carmelita","author_lname":"Lease","title":"Captain Mike Across America (Slacker Uprising)","isbn":"2584952617761"},
-{"id":98,"author_fname":"Austin","author_lname":"Croall","title":"Study in Choreography for Camera, A","isbn":"2827585475237"},
-{"id":99,"author_fname":"Cristian","author_lname":"Tipens","title":"Woodsman and the Rain (Kitsutsuki to ame)","isbn":"5800112541108"},
-{"id":100,"author_fname":"Harrietta","author_lname":"Goss","title":"Wind That Shakes the Barley, The","isbn":"0319893724443"}]
+[
+  {
+    "id": 1,
+    "author_fname": "Orsola",
+    "author_lname": "Arminger",
+    "title": "Forgiven",
+    "isbn": "0894001614632"
+  },
+  {
+    "id": 2,
+    "author_fname": "Selie",
+    "author_lname": "Boyford",
+    "title": "Europeans, The",
+    "isbn": "9646210453645"
+  },
+  {
+    "id": 3,
+    "author_fname": "Rheta",
+    "author_lname": "Seeks",
+    "title": "The Things of Life",
+    "isbn": "6513420807743"
+  },
+  {
+    "id": 4,
+    "author_fname": "Rosalie",
+    "author_lname": "Payton",
+    "title": "Lusty Men, The",
+    "isbn": "8271196340498"
+  },
+  {
+    "id": 5,
+    "author_fname": "Reilly",
+    "author_lname": "Leverington",
+    "title": "You Will Meet a Tall Dark Stranger",
+    "isbn": "3918135846073"
+  },
+  {
+    "id": 6,
+    "author_fname": "Taddeo",
+    "author_lname": "Portch",
+    "title": "Scream 2",
+    "isbn": "6193411025695"
+  },
+  {
+    "id": 7,
+    "author_fname": "Courtenay",
+    "author_lname": "Chazette",
+    "title": "22 Jump Street",
+    "isbn": "8480316557617"
+  },
+  {
+    "id": 8,
+    "author_fname": "Gunter",
+    "author_lname": "Rowesby",
+    "title": "Special Bulletin",
+    "isbn": "8982757593057"
+  },
+  {
+    "id": 9,
+    "author_fname": "Sonja",
+    "author_lname": "Ambrose",
+    "title": "Anna",
+    "isbn": "8080160759077"
+  },
+  {
+    "id": 10,
+    "author_fname": "Jorey",
+    "author_lname": "Vernall",
+    "title": "Ju-on: White Ghost",
+    "isbn": "6358740890015"
+  },
+  {
+    "id": 11,
+    "author_fname": "Cosme",
+    "author_lname": "Pym",
+    "title": "Son of Lassie",
+    "isbn": "6948244553058"
+  },
+  {
+    "id": 12,
+    "author_fname": "Sidonia",
+    "author_lname": "Kimberley",
+    "title": "Stella",
+    "isbn": "9110514870774"
+  },
+  {
+    "id": 13,
+    "author_fname": "Irvine",
+    "author_lname": "Jouanet",
+    "title": "Butcher Boy, The",
+    "isbn": "0045975899731"
+  },
+  {
+    "id": 14,
+    "author_fname": "Eduardo",
+    "author_lname": "Thandi",
+    "title": "Shooting Gallery",
+    "isbn": "6097679631548"
+  },
+  {
+    "id": 15,
+    "author_fname": "Ilario",
+    "author_lname": "Le Breton De La Vieuville",
+    "title": "Fallen Art (Sztuka spadania)",
+    "isbn": "3478793539338"
+  },
+  {
+    "id": 16,
+    "author_fname": "Zonnya",
+    "author_lname": "Jiggins",
+    "title": "Portrait of a Lady, The",
+    "isbn": "4576387731257"
+  },
+  {
+    "id": 17,
+    "author_fname": "Sonja",
+    "author_lname": "Sandifer",
+    "title": "Let Fury Have the Hour",
+    "isbn": "6832878967746"
+  },
+  {
+    "id": 18,
+    "author_fname": "Alberto",
+    "author_lname": "Ahmad",
+    "title": "Berserk: The Golden Age Arc 3 - Descent",
+    "isbn": "9668943606974"
+  },
+  {
+    "id": 19,
+    "author_fname": "Milty",
+    "author_lname": "Glabach",
+    "title": "Dopamine",
+    "isbn": "1478265607005"
+  },
+  {
+    "id": 20,
+    "author_fname": "Charles",
+    "author_lname": "McKern",
+    "title": "Shinjuku Incident (San suk si gin)",
+    "isbn": "6797828234401"
+  },
+  {
+    "id": 21,
+    "author_fname": "Crista",
+    "author_lname": "Hennington",
+    "title": "Chicago 8, The",
+    "isbn": "1698428450544"
+  },
+  {
+    "id": 22,
+    "author_fname": "Charity",
+    "author_lname": "Manvell",
+    "title": "Splendor",
+    "isbn": "2619749606086"
+  },
+  {
+    "id": 23,
+    "author_fname": "Vevay",
+    "author_lname": "Giacobini",
+    "title": "Witch Who Came from the Sea, The",
+    "isbn": "0696013566647"
+  },
+  {
+    "id": 24,
+    "author_fname": "Brnaby",
+    "author_lname": "Oager",
+    "title": "Winner, The",
+    "isbn": "6973631133246"
+  },
+  {
+    "id": 25,
+    "author_fname": "Zorine",
+    "author_lname": "Dunstone",
+    "title": "Wasp Woman, The",
+    "isbn": "6354058995607"
+  },
+  {
+    "id": 26,
+    "author_fname": "Joseph",
+    "author_lname": "Braisted",
+    "title": "Drillbit Taylor",
+    "isbn": "0154144924444"
+  },
+  {
+    "id": 27,
+    "author_fname": "Gardy",
+    "author_lname": "Bruyntjes",
+    "title": "Daisies (Sedmikrasky)",
+    "isbn": "0495879387100"
+  },
+  {
+    "id": 28,
+    "author_fname": "Cacilie",
+    "author_lname": "Sommerling",
+    "title": "Foxfire",
+    "isbn": "7386857518839"
+  },
+  {
+    "id": 29,
+    "author_fname": "Sigismond",
+    "author_lname": "Brise",
+    "title": "Held Up",
+    "isbn": "6455058093538"
+  },
+  {
+    "id": 30,
+    "author_fname": "Constantine",
+    "author_lname": "Goulbourn",
+    "title": "Murder at 1600",
+    "isbn": "3476251027246"
+  },
+  {
+    "id": 31,
+    "author_fname": "Joel",
+    "author_lname": "Spleving",
+    "title": "Devil's Backbone, The (Espinazo del diablo, El)",
+    "isbn": "4115570120784"
+  },
+  {
+    "id": 32,
+    "author_fname": "Henderson",
+    "author_lname": "Sahlstrom",
+    "title": "Blow Dry (a.k.a. Never Better)",
+    "isbn": "2446390229204"
+  },
+  {
+    "id": 33,
+    "author_fname": "Horatius",
+    "author_lname": "Josselson",
+    "title": "Hollywood Sex Wars",
+    "isbn": "6314380557832"
+  },
+  {
+    "id": 34,
+    "author_fname": "Shepard",
+    "author_lname": "Chaplin",
+    "title": "Chasing Ghosts: Beyond the Arcade ",
+    "isbn": "7160348559430"
+  },
+  {
+    "id": 35,
+    "author_fname": "Hurley",
+    "author_lname": "Rumsey",
+    "title": "Moscow Laughs",
+    "isbn": "3562883060453"
+  },
+  {
+    "id": 36,
+    "author_fname": "Inga",
+    "author_lname": "Brindle",
+    "title": "Behold a Pale Horse",
+    "isbn": "0802967531566"
+  },
+  {
+    "id": 37,
+    "author_fname": "Ellerey",
+    "author_lname": "Reeson",
+    "title": "Confidentially Connie",
+    "isbn": "3870058124386"
+  },
+  {
+    "id": 38,
+    "author_fname": "Clementine",
+    "author_lname": "Damp",
+    "title": "Lionheart",
+    "isbn": "3469052312343"
+  },
+  {
+    "id": 39,
+    "author_fname": "Dilan",
+    "author_lname": "Scopyn",
+    "title": "Sunshine",
+    "isbn": "1008742551251"
+  },
+  {
+    "id": 40,
+    "author_fname": "Cornelia",
+    "author_lname": "Wozencroft",
+    "title": "Without Love",
+    "isbn": "2303080425885"
+  },
+  {
+    "id": 41,
+    "author_fname": "Kristo",
+    "author_lname": "Wilprecht",
+    "title": "The Last Journey",
+    "isbn": "0298959325162"
+  },
+  {
+    "id": 42,
+    "author_fname": "Cinnamon",
+    "author_lname": "Lesor",
+    "title": "Cowboy Bebop: The Movie (Cowboy Bebop: Tengoku no Tobira)",
+    "isbn": "4288077743724"
+  },
+  {
+    "id": 43,
+    "author_fname": "Rolland",
+    "author_lname": "Thackray",
+    "title": "Ichi the Killer (Koroshiya 1)",
+    "isbn": "3141685460084"
+  },
+  {
+    "id": 44,
+    "author_fname": "Ertha",
+    "author_lname": "Harnell",
+    "title": "God Bless America",
+    "isbn": "7475139168843"
+  },
+  {
+    "id": 45,
+    "author_fname": "Garrott",
+    "author_lname": "Pyner",
+    "title": "Amish Murder, An",
+    "isbn": "6279768720585"
+  },
+  {
+    "id": 46,
+    "author_fname": "Ariel",
+    "author_lname": "Yelden",
+    "title": "Innocence",
+    "isbn": "5108505465145"
+  },
+  {
+    "id": 47,
+    "author_fname": "Nisse",
+    "author_lname": "Carrett",
+    "title": "Science and Islam",
+    "isbn": "1350151908376"
+  },
+  {
+    "id": 48,
+    "author_fname": "Nanice",
+    "author_lname": "Stride",
+    "title": "Thomas in Love (Thomas est Amoureux)",
+    "isbn": "7881458749748"
+  },
+  {
+    "id": 49,
+    "author_fname": "Marsh",
+    "author_lname": "Cuesta",
+    "title": "Panther",
+    "isbn": "2960149702661"
+  },
+  {
+    "id": 50,
+    "author_fname": "Elisha",
+    "author_lname": "Claeskens",
+    "title": "Emotion",
+    "isbn": "7940519543294"
+  },
+  {
+    "id": 51,
+    "author_fname": "Felike",
+    "author_lname": "Moan",
+    "title": "Red Sands",
+    "isbn": "1020359743368"
+  },
+  {
+    "id": 52,
+    "author_fname": "Tobiah",
+    "author_lname": "Hember",
+    "title": "Monkey Shines",
+    "isbn": "2490238569763"
+  },
+  {
+    "id": 53,
+    "author_fname": "Siffre",
+    "author_lname": "Mains",
+    "title": "A Star Athlete",
+    "isbn": "7277782224415"
+  },
+  {
+    "id": 54,
+    "author_fname": "Carlina",
+    "author_lname": "McLuckie",
+    "title": "Talk to Her (Hable con Ella)",
+    "isbn": "5854340040354"
+  },
+  {
+    "id": 55,
+    "author_fname": "Shannan",
+    "author_lname": "Curman",
+    "title": "Hair Show",
+    "isbn": "5593843798866"
+  },
+  {
+    "id": 56,
+    "author_fname": "Paige",
+    "author_lname": "Bretton",
+    "title": "Deadly Blessing",
+    "isbn": "2897951934036"
+  },
+  {
+    "id": 57,
+    "author_fname": "Curcio",
+    "author_lname": "D' Angelo",
+    "title": "Orphanage, The (Orfanato, El)",
+    "isbn": "2731593918391"
+  },
+  {
+    "id": 58,
+    "author_fname": "Aindrea",
+    "author_lname": "Falcus",
+    "title": "Fiston",
+    "isbn": "7224328398707"
+  },
+  {
+    "id": 59,
+    "author_fname": "Yoshi",
+    "author_lname": "Snawdon",
+    "title": "Beautiful",
+    "isbn": "1161211908540"
+  },
+  {
+    "id": 60,
+    "author_fname": "Brendon",
+    "author_lname": "Myers",
+    "title": "Bad Boy Bubby",
+    "isbn": "1421895827473"
+  },
+  {
+    "id": 61,
+    "author_fname": "Meyer",
+    "author_lname": "Zemler",
+    "title": "Free Willy 2: The Adventure Home",
+    "isbn": "2227089026348"
+  },
+  {
+    "id": 62,
+    "author_fname": "Bronnie",
+    "author_lname": "De Launde",
+    "title": "I Live My Life",
+    "isbn": "4807340269527"
+  },
+  {
+    "id": 63,
+    "author_fname": "Joni",
+    "author_lname": "Larmor",
+    "title": "Pauly Shore Is Dead",
+    "isbn": "5313145771721"
+  },
+  {
+    "id": 64,
+    "author_fname": "Dean",
+    "author_lname": "Churchyard",
+    "title": "My Sweet Pepper Land",
+    "isbn": "4602062242127"
+  },
+  {
+    "id": 65,
+    "author_fname": "Wain",
+    "author_lname": "Keyser",
+    "title": "Low Down Dirty Shame, A",
+    "isbn": "1334623955102"
+  },
+  {
+    "id": 66,
+    "author_fname": "Elnar",
+    "author_lname": "Soffe",
+    "title": "Angels and Insects",
+    "isbn": "2186447044799"
+  },
+  {
+    "id": 67,
+    "author_fname": "Clementius",
+    "author_lname": "Loveredge",
+    "title": "Diary of a Hitman",
+    "isbn": "4899945205210"
+  },
+  {
+    "id": 68,
+    "author_fname": "Dotty",
+    "author_lname": "Joberne",
+    "title": "Manny & Lo",
+    "isbn": "0711894181320"
+  },
+  {
+    "id": 69,
+    "author_fname": "Kirk",
+    "author_lname": "Newvell",
+    "title": "Lisa Picard is Famous (a.k.a. Famous)",
+    "isbn": "4192025146464"
+  },
+  {
+    "id": 70,
+    "author_fname": "Blinni",
+    "author_lname": "Kernes",
+    "title": "Three Wise Men (Kolme viisasta miest\u00e4)",
+    "isbn": "5455739783423"
+  },
+  {
+    "id": 71,
+    "author_fname": "Aron",
+    "author_lname": "McIlhatton",
+    "title": "Temple Grandin",
+    "isbn": "6102823001676"
+  },
+  {
+    "id": 72,
+    "author_fname": "Rhianna",
+    "author_lname": "Sudran",
+    "title": "Not Without My Daughter",
+    "isbn": "0521891829579"
+  },
+  {
+    "id": 73,
+    "author_fname": "Elene",
+    "author_lname": "Erskine Sandys",
+    "title": "Road North (Tie pohjoiseen)",
+    "isbn": "3205884411515"
+  },
+  {
+    "id": 74,
+    "author_fname": "Geoffrey",
+    "author_lname": "Glentworth",
+    "title": "Fortune Cookie, The",
+    "isbn": "1620405659926"
+  },
+  {
+    "id": 75,
+    "author_fname": "Karlik",
+    "author_lname": "Iscowitz",
+    "title": "Escape from Planet Earth",
+    "isbn": "4915541164602"
+  },
+  {
+    "id": 76,
+    "author_fname": "Eadith",
+    "author_lname": "Tesche",
+    "title": "Women in Trouble",
+    "isbn": "5767577699517"
+  },
+  {
+    "id": 77,
+    "author_fname": "Avram",
+    "author_lname": "Hinsch",
+    "title": "Journey 2: The Mysterious Island",
+    "isbn": "8093127884253"
+  },
+  {
+    "id": 78,
+    "author_fname": "Silva",
+    "author_lname": "Port",
+    "title": "Big Hangover, The",
+    "isbn": "1015933155622"
+  },
+  {
+    "id": 79,
+    "author_fname": "Nicolas",
+    "author_lname": "Huckerbe",
+    "title": "Switching Goals",
+    "isbn": "0305379240920"
+  },
+  {
+    "id": 80,
+    "author_fname": "Minny",
+    "author_lname": "Hallaways",
+    "title": "Dark Girls",
+    "isbn": "9110050066789"
+  },
+  {
+    "id": 81,
+    "author_fname": "Lauri",
+    "author_lname": "Red",
+    "title": "Hurricane, The",
+    "isbn": "0494641258633"
+  },
+  {
+    "id": 82,
+    "author_fname": "Robina",
+    "author_lname": "Wealthall",
+    "title": "Far Out Isn't Far Enough: The Tomi Ungerer Story",
+    "isbn": "6697924215610"
+  },
+  {
+    "id": 83,
+    "author_fname": "Kristoforo",
+    "author_lname": "Omrod",
+    "title": "Eight Miles High (Das wilde Leben)",
+    "isbn": "7392902299965"
+  },
+  {
+    "id": 84,
+    "author_fname": "Baxy",
+    "author_lname": "Ballchin",
+    "title": "Glass Menagerie, The",
+    "isbn": "9118179852860"
+  },
+  {
+    "id": 85,
+    "author_fname": "Kelby",
+    "author_lname": "Noor",
+    "title": "Great Texas Dynamite Chase, The",
+    "isbn": "8746075548632"
+  },
+  {
+    "id": 86,
+    "author_fname": "Lemmy",
+    "author_lname": "Pascow",
+    "title": "You and Me (Ty i ya)",
+    "isbn": "4133045916654"
+  },
+  {
+    "id": 87,
+    "author_fname": "Mikaela",
+    "author_lname": "Densey",
+    "title": "Little Women",
+    "isbn": "7194243340325"
+  },
+  {
+    "id": 88,
+    "author_fname": "Donn",
+    "author_lname": "Starcks",
+    "title": "Innocent Man, An",
+    "isbn": "1104946205379"
+  },
+  {
+    "id": 89,
+    "author_fname": "Pall",
+    "author_lname": "Delhanty",
+    "title": "Alexander Nevsky (Aleksandr Nevskiy)",
+    "isbn": "8329606229832"
+  },
+  {
+    "id": 90,
+    "author_fname": "Devonna",
+    "author_lname": "Purslow",
+    "title": "588 Rue Paradis (Mother)",
+    "isbn": "1308567767007"
+  },
+  {
+    "id": 91,
+    "author_fname": "Knox",
+    "author_lname": "Boorer",
+    "title": "Sucker, The (Corniaud, Le)",
+    "isbn": "1334314006539"
+  },
+  {
+    "id": 92,
+    "author_fname": "Ruthanne",
+    "author_lname": "Kinnar",
+    "title": "Punk Syndrome, The (Kovasikajuttu)",
+    "isbn": "6494245079876"
+  },
+  {
+    "id": 93,
+    "author_fname": "Veda",
+    "author_lname": "Mugford",
+    "title": "Black River (Kuroi kawa)",
+    "isbn": "9256837149917"
+  },
+  {
+    "id": 94,
+    "author_fname": "Rossy",
+    "author_lname": "Nashe",
+    "title": "She Done Him Wrong",
+    "isbn": "0007403832909"
+  },
+  {
+    "id": 95,
+    "author_fname": "Valaria",
+    "author_lname": "Grigolli",
+    "title": "Snowman, The",
+    "isbn": "5584453208371"
+  },
+  {
+    "id": 96,
+    "author_fname": "Marysa",
+    "author_lname": "Bickerstasse",
+    "title": "It Felt Like Love",
+    "isbn": "4546783464452"
+  },
+  {
+    "id": 97,
+    "author_fname": "Carmelita",
+    "author_lname": "Lease",
+    "title": "Captain Mike Across America (Slacker Uprising)",
+    "isbn": "2584952617761"
+  },
+  {
+    "id": 98,
+    "author_fname": "Austin",
+    "author_lname": "Croall",
+    "title": "Study in Choreography for Camera, A",
+    "isbn": "2827585475237"
+  },
+  {
+    "id": 99,
+    "author_fname": "Cristian",
+    "author_lname": "Tipens",
+    "title": "Woodsman and the Rain (Kitsutsuki to ame)",
+    "isbn": "5800112541108"
+  },
+  {
+    "id": 100,
+    "author_fname": "Harrietta",
+    "author_lname": "Goss",
+    "title": "Wind That Shakes the Barley, The",
+    "isbn": "0319893724443"
+  }
+]
