@@ -4,6 +4,7 @@ from booker import __app_name__, __version__, cli
 
 runner = CliRunner()
 
+
 def test_version():
     result = runner.invoke(cli.app, ["-v"])
     assert result.exit_code == 0
