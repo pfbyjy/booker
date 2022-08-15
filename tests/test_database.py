@@ -1,8 +1,8 @@
 from pathlib import Path
 from unittest.mock import patch
 
-from booker import database, SUCCESS, DB_WRITE_ERROR
-
+from booker import database
+from booker.error import Error
 from pytest import fixture
 
 
@@ -17,11 +17,12 @@ def db_file(tmp_path) -> Path:
 def test_init_database_error(db_file):
     with patch.object(Path, "write_text") as failing_write:
         failing_write.side_effect = OSError(1, "writing to the file fails")
-        err_code = database.init_database(db_file)
-        assert err_code == DB_WRITE_ERROR
+        outcome = database.init_database(db_file)
+        assert outcome.failed()
+        assert outcome.is_error(Error.DB_WRITE_ERROR)
 
 
 def test_init_database(db_file):
-    err_code = database.init_database(db_file)
-    assert err_code == SUCCESS
+    outcome = database.init_database(db_file)
+    assert outcome.succeeded()
     assert db_file.read_text() == "[]"
