@@ -39,7 +39,7 @@ def init(
                              fg=typer.colors.GREEN))
     chain.sequence(config.init_app, [db_path])
     chain.sequence(database.init_database, [db_path])
-    chain.execute()
+    chain.execute_serial()
 
 
 def _version(version_flag: bool) -> None:

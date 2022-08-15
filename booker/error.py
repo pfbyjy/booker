@@ -52,7 +52,7 @@ class OutcomeChain:
         self.finalizer = finalizer
         self.toExecute = []
 
-    def execute(self):
+    def execute_serial(self):
         # execute each action in the chain
         for action in self.toExecute:
             outcome = action()
