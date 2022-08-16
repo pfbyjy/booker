@@ -27,7 +27,7 @@ def config_file_exists(path: Path = None, **kwargs) -> Outcome:
         return EXISTENCE_ERROR(err)
 
 
-def init_app(db_path: str, config_dir: Path = None, **kwargs) -> Outcome:
+def init_app(db_path: Path, config_dir: Path = None, **kwargs) -> Outcome:
     config_outcome = _init_config_file(config_dir)
     if config_outcome.failed():
         return config_outcome
@@ -49,7 +49,7 @@ def _init_config_file(path: Path = None, **kwargs) -> Outcome:
     return SUCCESS()
 
 
-def _add_database_config(db_path: str, config_dir: str = None, **kwargs) -> Outcome:
+def _add_database_config(db_path: Path, config_dir: Path = None, **kwargs) -> Outcome:
     config_parser = configparser.ConfigParser()
     config_parser["General"] = {"database": db_path}
     try:
