@@ -60,23 +60,23 @@ def test_init_app_succeeds(mock_config_dir, mock_db_file):
     )
 
 
-def test_init_returns_directory_error_when_creating_config_dir_fails(mock_config_dir):
+def test_init_returns_directory_error_when_creating_config_dir_fails(mock_config_dir, mock_db_file):
     with patch.object(config, "_init_config_file") as failing_config_file_init_mock:
         failing_config_file_init_mock.return_value = CONFIG_DIRECTORY_ERROR("")
-        outcome = config.init_app(config.config_file_path(mock_config_dir), mock_config_dir)
+        outcome = config.init_app(mock_db_file, mock_config_dir)
         assert outcome.failed()
         assert isinstance(outcome, CONFIG_DIRECTORY_ERROR)
 
 
-def test_init_returns_file_error_when_creating_config_file_fails(mock_config_dir):
+def test_init_returns_file_error_when_creating_config_file_fails(mock_config_dir, mock_db_file):
     with patch.object(config, "_init_config_file") as failing_config_file_init_mock:
         failing_config_file_init_mock.return_value = CONFIG_FILE_ERROR("")
-        outcome = config.init_app(config.config_file_path(mock_config_dir), mock_config_dir)
+        outcome = config.init_app(mock_db_file, mock_config_dir)
         assert isinstance(outcome, CONFIG_FILE_ERROR)
 
 
-def test_init_returns_file_error_when_populating_db_config_fails(mock_config_dir):
+def test_init_returns_file_error_when_populating_db_config_fails(mock_config_dir, mock_db_file):
     with patch.object(config, "_add_database_config") as failing_db_add_init_mock:
         failing_db_add_init_mock.return_value = CONFIG_FILE_ERROR("")
-        outcome = config.init_app(config.config_file_path(mock_config_dir), mock_config_dir)
+        outcome = config.init_app(mock_db_file, mock_config_dir)
         assert isinstance(outcome, CONFIG_FILE_ERROR)
