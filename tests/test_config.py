@@ -30,12 +30,12 @@ def test_init_config_file_succeeds(mock_config_dir):
     assert config.config_file_path(mock_config_dir).exists()
 
 
-def test_add_database_config_succeeds(mock_config_dir):
-    outcome = config._add_database_config(config.config_file_path(mock_config_dir), mock_config_dir)
+def test_add_database_config_succeeds(mock_config_dir, mock_db_file):
+    outcome = config._add_database_config(mock_db_file, mock_config_dir)
     assert outcome.succeeded()
     assert (
         config.config_file_path(mock_config_dir).read_text().strip()
-        == f"[General]\ndatabase = {config.config_file_path(mock_config_dir)}"
+        == f"[General]\ndatabase = {mock_db_file}"
     )
 
 
@@ -50,14 +50,14 @@ def test_add_database_config_fails_with_config_file_error_code(mock_config_dir):
 
 
 def test_init_app_succeeds(mock_config_dir, mock_db_file):
-    print(mock_config_dir)
-    print(mock_db_file)
-    outcome = config.init_app(mock_db_file, mock_config_dir)
-    assert outcome.succeeded()
-    assert (
-        config.config_file_path(mock_config_dir).read_text().strip()
-        == f"[General]\ndatabase = {config.config_file_path(mock_config_dir)}"
-    )
+    with patch.object(config, 'config_dir_path') as cfig:
+        cfig.return_value = mock_config_dir
+        outcome = config.init_app(mock_db_file, mock_config_dir)
+        assert outcome.succeeded()
+        assert (
+            config.config_file_path(mock_config_dir).read_text().strip()
+            == f"[General]\ndatabase = {mock_db_file}"
+         )
 
 
 def test_init_returns_directory_error_when_creating_config_dir_fails(mock_config_dir, mock_db_file):
