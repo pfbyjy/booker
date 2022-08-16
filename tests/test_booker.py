@@ -1,7 +1,4 @@
 from unittest.mock import patch
-
-import pytest
-
 from booker import config
 from booker.booker import add, get_list
 from booker.database import read_books, write_books
