@@ -27,14 +27,14 @@ def mock_json_db_location(mock_dir, request) -> Path:
 def mock_config_dir(mock_dir) -> Path:
     mock_path = mock_dir / __app_name__
     mock_path.mkdir(exist_ok=True)
-    yield mock_path
+    return mock_path
 
 
 @fixture(scope="session")
 def mock_db_file(mock_dir) -> Path:
     db = mock_dir / "mock_books.json"
     db.write_text("[]")
-    yield db
+    return db
 
 
 def _get_test_resource_path(filename: str) -> Path:
