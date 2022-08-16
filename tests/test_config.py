@@ -51,9 +51,8 @@ def test_add_database_config_fails_with_config_file_error_code(mock_config_dir):
 
 def test_init_app_succeeds(mock_config_dir, mock_db_file):
     print(mock_config_dir)
-    print(config.config_file_path(mock_config_dir))
     print(mock_db_file)
-    outcome = config.init_app(config.config_file_path(mock_config_dir), mock_config_dir)
+    outcome = config.init_app(mock_db_file, mock_config_dir)
     assert outcome.succeeded()
     assert (
         config.config_file_path(mock_config_dir).read_text().strip()
