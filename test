@@ -18,8 +18,8 @@ declare -a regular_cmds=(
 )
 
 declare -a stdout_cmds=(
-	"$base_cmd -s" 
-	"$base_cmd -s $base_mark_cmd" 
+	"$base_cmd --capture=tee-sys" 
+	"$base_cmd --capture=tee-sys $base_mark_cmd" 
 )
 
 declare -a verbose_cmds=(

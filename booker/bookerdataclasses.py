@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import TypedDict, List, NamedTuple
 
-from booker.error import Outcome
+from booker.control import Outcome
 
 
 class ImportMethod(Enum):
@@ -16,6 +16,9 @@ class Book(TypedDict):
     author_fname: str
     author_lname: str
 
+    @property
+    def id(self):
+        return self
 
 BookList = List[Book]
 

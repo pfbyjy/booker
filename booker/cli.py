@@ -1,44 +1,48 @@
-from typing import Optional, Any
+from typing import Optional, List
 
-from pathlib import Path
 import typer
 
 from booker import (
     __app_name__,
     __version__,
-    config,
-    database,
+    database, booker,
 )
-from booker.error import Outcome, OutcomeChain
+from booker.control import OutcomeChain
 
 app = typer.Typer()
 
 
-def cli_error_handler(outcome: Outcome) -> Any:
-    if outcome.failed():
-        typer.secho(str(outcome), fg=typer.colors.RED)
-        raise typer.Exit(1)
+def require_option(opt: str) -> None:
+    typer.secho(f"--{opt} is required.", fg=typer.colors.RED)
+    raise typer.Exit(1)
 
 
 @app.command()
 def init(
-    db_path: str = typer.Option(
-        str(database.DEFAULT_DB_FILE_PATH),
-        "--db-path",
-        "-db",
-        prompt="book database location?",
-    ),
-) -> None:
-    db_path = Path(db_path)
-    chain = OutcomeChain(
-        cli_error_handler,
-        lambda: typer.secho(
-            f"The book database is {db_path.absolute()}", fg=typer.colors.GREEN
+        db_path: str = typer.Option(
+            str(database.DEFAULT_DB_FILE_PATH),
+            "--db-path",
+            "-db",
+            prompt="book database location?",
         ),
-    )
-    chain.sequence(config.init_app, [db_path])
-    chain.sequence(database.init_database, [db_path])
-    chain.execute_serial()
+) -> None:
+    """ Initialize the book database."""
+    booker.init(db_path)
+
+
+@app.command()
+def add(
+        title: str = typer.Option(None),
+        isbn: str = typer.Option(None),
+        author_fname: str = typer.Option(None),
+        author_lname: str = typer.Option(None)
+) -> None:
+    """Add a book to the database."""
+    OutcomeChain(
+        finalizer=lambda: f"{' '.join(title)} was added to the database"
+    ).sequence(
+        booker.add, locals()  # this is hacky.
+    ).execute()
 
 
 def _version(version_flag: bool) -> None:
@@ -49,13 +53,13 @@ def _version(version_flag: bool) -> None:
 
 @app.callback()
 def main(
-    version: Optional[bool] = typer.Option(
-        None,
-        "--version",
-        "-v",
-        help="Show the application's version then exit.",
-        callback=_version,
-        is_eager=True,
-    )
+        version: Optional[bool] = typer.Option(
+            None,
+            "--version",
+            "-v",
+            help="Show the application's version then exit.",
+            callback=_version,
+            is_eager=True,
+        )
 ) -> None:
     return
