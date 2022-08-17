@@ -1,11 +1,13 @@
 from typing import Optional, List
 
 import typer
+from rich.console import Console
+from rich.table import Table
 
 from booker import (
     __app_name__,
     __version__,
-    database, booker,
+    database, booker, config,
 )
 from booker.control import OutcomeChain
 
@@ -43,6 +45,28 @@ def add(
     ).sequence(
         booker.add, locals()  # this is hacky.
     ).execute()
+
+
+@app.command(name="list")
+def list_all() -> None:
+    """List all the books in the database."""
+    book_list = booker.get_list().get_key('book_list')
+    if len(book_list) == 0:
+        typer.secho(
+            "There are no books in the reading list yet", fg=typer.colors.RED
+        )
+        raise typer.Exit()
+
+    table = Table("Author", "Title", "ISBN", "Status")
+    for book in book_list:
+        print(book)
+        author = f"{book['author_lname']}, {book['author_fname']}"
+        table.add_row(author, book['title'], book['isbn'])
+
+    console = Console()
+    print(config.config_file_path())
+    with console.pager():
+        console.print(table)
 
 
 def _version(version_flag: bool) -> None:
