@@ -83,7 +83,7 @@ def test_yaml():
     write_path = Path().home() / "book_export.yaml"
     export_yaml()
     #assert write_path.exists()
-    write_path.unlink()
+    #write_path.unlink()
 
 
 def test_delete_book(mock_book_list):
