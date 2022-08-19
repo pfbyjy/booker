@@ -12,14 +12,16 @@ from booker import __app_name__
 
 @fixture(scope="session")
 def mock_dir(tmp_path_factory) -> Path:
-    base = tmp_path_factory.mktemp('mock_dir')
+    base = tmp_path_factory.mktemp("mock_dir")
     yield base
 
 
 @fixture(scope="function")
 def mock_json_db_location(mock_dir, request) -> Path:
     if len(request.param) > 1:
-        request.param += [mock_dir / f"{ ''.join(random.sample(string.ascii_letters, 4))}.json"]
+        request.param += [
+            mock_dir / f"{ ''.join(random.sample(string.ascii_letters, 4))}.json"
+        ]
     return request.param
 
 
@@ -38,9 +40,7 @@ def mock_db_file(mock_dir) -> Path:
 
 
 def _get_test_resource_path(filename: str) -> Path:
-    return Path(
-        pkg_resources.resource_filename("tests.resources", filename)
-    )
+    return Path(pkg_resources.resource_filename("tests.resources", filename))
 
 
 @fixture(scope="session")
@@ -66,9 +66,8 @@ def raw_mock_data(mock_data_path) -> str:
 @fixture(scope="session")
 def mock_single_book(mock_single_input) -> Book:
     parsed_data = json.loads(mock_single_input.read_text())[0]
-    parsed_data.pop('id')
+    parsed_data.pop("id")
     return Book(**parsed_data)
-
 
 
 @fixture(scope="session")

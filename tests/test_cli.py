@@ -24,10 +24,10 @@ def test_version():
         ["init", "--db-path"],
         ["init", "-db"],
     ],
-    indirect=True
+    indirect=True,
 )
 def test_init(mock_json_db_location, mock_config_dir):
-    with patch.object(config, 'config_dir_path') as cfig:
+    with patch.object(config, "config_dir_path") as cfig:
         cfig.return_value = mock_config_dir
         result = runner.invoke(cli.app, mock_json_db_location)
         assert result.exit_code == 0
@@ -37,15 +37,21 @@ def test_init(mock_json_db_location, mock_config_dir):
 @pytest.mark.parametrize(
     "flags",
     [
-        ["add",
-         "--title", "'the unbearable lightness of being'",
-         "--isbn", "1234567890123",
-         "--author-fname", "Milo",
-         "--author-lname", "Bricheimmer"
-         ]
-    ], )
+        [
+            "add",
+            "--title",
+            "'the unbearable lightness of being'",
+            "--isbn",
+            "1234567890123",
+            "--author-fname",
+            "Milo",
+            "--author-lname",
+            "Bricheimmer",
+        ]
+    ],
+)
 def test_add(flags, mock_config_dir, mock_db_file):
-    with patch.object(config, 'config_dir_path') as cfig:
+    with patch.object(config, "config_dir_path") as cfig:
         cfig.return_value = mock_config_dir
         mock_config_dir.parent.mkdir(exist_ok=True)
         init(mock_db_file)

@@ -39,3 +39,8 @@ class VALIDATION_ERROR(ERROR):
 class EXISTENCE_ERROR(ERROR):
     def __init__(self, cause: Exception):
         super().__init__("the resource you are looking for does not exist.", cause)
+
+
+class EXPORT_ERROR(ERROR):
+    def __init__(self, cause: Exception):
+        super().__init__("Something went wrong when exporting the reading list.", cause)
