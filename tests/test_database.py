@@ -81,6 +81,7 @@ def test_update_book_status_throws_key_error_for_non_existent_key(mock_book_list
 
 def test_yaml():
     write_path = Path().home() / "book_export.yaml"
+    print(write_path)
     export_yaml()
     assert write_path.exists()
     write_path.unlink()
