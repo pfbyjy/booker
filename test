@@ -18,8 +18,8 @@ declare -a regular_cmds=(
 )
 
 declare -a stdout_cmds=(
-	"$base_cmd -s" 
-	"$base_cmd -s $base_mark_cmd" 
+	"$base_cmd --capture=tee-sys" 
+	"$base_cmd --capture=tee-sys $base_mark_cmd" 
 )
 
 declare -a verbose_cmds=(
@@ -38,6 +38,9 @@ cmd_lookup() {
 	elif [[ $1 == "verbose" ]]
 	then
 		echo "${verbose_cmds[$2]}" $3 
+	elif [[ $1 == "coverage" ]]
+	then 
+		echo "python -m pytest --cov --cov-report=xml"
 	else
 		echo $1 "is not a known command"
 	fi

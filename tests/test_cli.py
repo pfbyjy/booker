@@ -1,9 +1,10 @@
-import pathlib
+from unittest.mock import patch
 
 import pytest
 from typer.testing import CliRunner
 
-from booker import __app_name__, __version__, cli, database, config
+from booker.booker import init
+from booker import __app_name__, __version__, cli, config
 
 runner = CliRunner()
 
@@ -17,21 +18,42 @@ def test_version():
 
 @pytest.mark.integration
 @pytest.mark.parametrize(
-    "flags",
+    "mock_json_db_location",
     [
         ["init"],
-        ["init", "--db-path", "test_long_flag.json"],
-        ["init", "-db", "test_short_flag.json"],
+        ["init", "--db-path"],
+        ["init", "-db"],
+    ],
+    indirect=True,
+)
+def test_init(mock_json_db_location, mock_config_dir):
+    with patch.object(config, "config_dir_path") as cfig:
+        cfig.return_value = mock_config_dir
+        result = runner.invoke(cli.app, mock_json_db_location)
+        assert result.exit_code == 0
+
+
+@pytest.mark.integration
+@pytest.mark.parametrize(
+    "flags",
+    [
+        [
+            "add",
+            "--title",
+            "'the unbearable lightness of being'",
+            "--isbn",
+            "1234567890123",
+            "--author-fname",
+            "Milo",
+            "--author-lname",
+            "Bricheimmer",
+        ]
     ],
 )
-def test_init(flags):
-    result = runner.invoke(cli.app, flags)
-    db_path = database.get_database_path(config.config_file_path())
-    assert result.exit_code == 0
-    assert f"The book database is {db_path.absolute()}" in result.stdout
-    # clean up what we've created
-    db_path.unlink()
-    config.config_file_path().unlink()
-    # assert that the cleanup actually happened
-    assert not db_path.exists()
-    assert not config.config_file_path().exists()
+def test_add(flags, mock_config_dir, mock_db_file):
+    with patch.object(config, "config_dir_path") as cfig:
+        cfig.return_value = mock_config_dir
+        mock_config_dir.parent.mkdir(exist_ok=True)
+        init(mock_db_file)
+        result = runner.invoke(cli.app, flags)
+        assert result.exit_code == 0
