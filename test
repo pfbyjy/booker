@@ -38,6 +38,9 @@ cmd_lookup() {
 	elif [[ $1 == "verbose" ]]
 	then
 		echo "${verbose_cmds[$2]}" $3 
+	elif [[ $1 == "coverage" ]]
+	then 
+		echo "python -m pytest --cov --cov-report=xml"
 	else
 		echo $1 "is not a known command"
 	fi
