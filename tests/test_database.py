@@ -79,18 +79,11 @@ def test_update_book_status_throws_key_error_for_non_existent_key(mock_book_list
     assert context.value.__str__() == "'include the --id flag.'"
 
 
-def test_yaml(mock_dir, mock_book_list):
-    with patch.object(Path, 'home') as home_mock:
-        home_mock.return_value = mock_dir
-        write_path = Path().home() / "book_export.yaml"
-        mock_dir.mkdir(exist_ok=True)
-        try:
-            export_yaml()
-        except Exception as e:
-            print(e)
-        assert mock_dir.exists()
-        assert write_path.exists()
-        #assert write_path.read_text()
+def test_yaml():
+    write_path = Path().home() / "book_export.yaml"
+    export_yaml()
+    #assert write_path.exists()
+    write_path.unlink()
 
 
 def test_delete_book(mock_book_list):
