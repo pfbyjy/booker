@@ -83,7 +83,7 @@ def test_yaml(mock_dir, mock_book_list):
     with patch.object(Path, 'home') as home_mock:
         home_mock.return_value = mock_dir
         write_path = Path().home() / "book_export.yaml"
-        print(write_path)
+        mock_dir.mkdir(exist_ok=True)
         try:
             export_yaml()
         except Exception as e:
